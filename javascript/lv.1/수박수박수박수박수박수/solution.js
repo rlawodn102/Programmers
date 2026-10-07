@@ -1,8 +1,7 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+function solution(n) {
+    var answer = '';
+    for (var i=0;i<n;i++) i % 2 === 0 ? answer += '수' : answer += '박';
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution(3));

@@ -12,4 +12,4 @@ function solution(left, right) {
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution(13, 17));
