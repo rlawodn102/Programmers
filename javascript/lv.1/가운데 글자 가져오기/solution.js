@@ -1,8 +1,5 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
-    return answer;
+function solution(s) {
+    return s.length % 2 !== 0 ? s.slice(Math.floor(s.length / 2), Math.ceil(s.length / 2)) : s.slice(s.length / 2 - 1, s.length / 2 + 1);
 }
 
-console.log(solution(3, 5));
+console.log(solution("abcde"));

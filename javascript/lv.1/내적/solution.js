@@ -1,8 +1,7 @@
 function solution(a, b) {
     var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+    a.forEach((v, i) => answer += v * b[i]);
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution([1, 2, 3, 4], [-3, -1, 0, 2]));
