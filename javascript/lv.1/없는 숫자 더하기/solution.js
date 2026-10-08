@@ -1,8 +1,7 @@
-function solution(a, b) {
+function solution(numbers) {
     var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+    for (var i=0;i<10;i++) numbers.indexOf(i) === -1 && (answer += i)
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution([1,2,3,4,6,7,8,0]));

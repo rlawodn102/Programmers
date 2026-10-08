@@ -1,8 +1,5 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
-    return answer;
+function solution(phone_number) {
+    return phone_number.replace(phone_number.substr(0, phone_number.length - 4), '*'.repeat(phone_number.length - 4));
 }
 
-console.log(solution(3, 5));
+console.log(solution("01033334444"));

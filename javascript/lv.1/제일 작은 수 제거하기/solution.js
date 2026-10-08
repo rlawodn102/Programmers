@@ -1,8 +1,12 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
-    return answer;
+function solution(arr) {
+    if (arr.length === 1) {
+        return [-1];
+    }
+
+    var min = Math.min(...arr);
+    arr.splice(arr.indexOf(min), 1);
+
+    return arr;
 }
 
-console.log(solution(3, 5));
+console.log(solution([4,3,2,1]));

@@ -1,8 +1,7 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+function solution(x, n) {
+    var answer = [];
+    for (var i=1;i<=n;i++) answer.push(x * i);
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution(2, 5));

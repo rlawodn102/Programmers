@@ -1,8 +1,11 @@
-function solution(a, b) {
+function solution(n) {
     var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+    var sqrt = Math.sqrt(n);
+    
+    if (sqrt % 1 === 0) answer = (sqrt + 1) ** 2;
+    else answer = -1;
+    
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution(121));

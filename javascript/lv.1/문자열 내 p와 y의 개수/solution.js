@@ -1,8 +1,14 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
-    return answer;
+function solution(s){
+    var answer = true;
+    var p_cnt = 0;
+    var y_cnt = 0;
+    
+    [...s].forEach(v => {
+        if (v === "p" || v === "P") p_cnt++;
+        if (v === "y" || v === "Y") y_cnt++;
+    })
+
+    return p_cnt === y_cnt;
 }
 
-console.log(solution(3, 5));
+console.log(solution("pPoooyY"));

@@ -1,8 +1,6 @@
-function solution(a, b) {
-    var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
-    return answer;
+function solution(arr, divisor) {
+    var answer = arr.filter(v => v % divisor === 0).sort((a, b) => a - b);
+    return answer.length !== 0 ? answer : [-1];
 }
 
-console.log(solution(3, 5));
+console.log(solution([5, 9, 7, 10], 5));

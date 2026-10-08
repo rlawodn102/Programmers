@@ -1,8 +1,9 @@
-function solution(a, b) {
+function solution(absolutes, signs) {
     var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+    absolutes.forEach((v, i) => {
+        answer += signs[i] ? v : -v;
+    })
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution([4,7,12], [true,false,true]));

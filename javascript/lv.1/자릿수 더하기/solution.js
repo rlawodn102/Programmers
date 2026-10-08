@@ -1,8 +1,7 @@
-function solution(a, b) {
+function solution(n) {
     var answer = 0;
-    if (b >= a) for (var i=a;i<=b;i++) answer += i;
-    else for (var i=b;i<=a;i++) answer += i;
+    [...String(n)].forEach(v => answer += parseInt(v));
     return answer;
 }
 
-console.log(solution(3, 5));
+console.log(solution(123));
