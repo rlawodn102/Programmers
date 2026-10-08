@@ -9,7 +9,6 @@
 
 ## Structure
 
-```text
 programmers/
 ├── javascript/
 │   ├── [lv.1](https://github.com/rlawodn102/Programmers/tree/master/javascript/lv.1)/
