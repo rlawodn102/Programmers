@@ -3,8 +3,8 @@ function solution(array, commands) {
 
     commands.forEach(command => {
         var new_arr = array
-                        .slice(command[0] - 1, command[1])
-                        .sort((a, b) => a - b);
+            .slice(command[0] - 1, command[1])
+            .sort((a, b) => a - b);
 
         answer.push(new_arr[command[2] - 1]);
     })
